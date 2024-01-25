@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Email Message Interface System</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+
+		form {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+
+		input[type="text"],
+		textarea {
+			display: block;
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			border: none;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: white;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+	</style>
+</head>
+<body>
+	<form action="mailto:abc@xyz.com,your_email_address" method="post" enctype="text/plain">
+		<label for="to">To:</label>
+		<input type="text" id="to" name="to" value="abc@xyz.com; 22mcce24@uohyd.ac.in">
+		<label for="subject">Subject:</label>
+		<input type="text" id="subject" name="subject" value="Assign #3 - Pratik Singh(22MCCE24)">
+		<label for="message">Message:</label>
+		<textarea id="message" name="message" rows="10" cols="50">
+    Dear Professor,
+      My name is Pratik Singh, and I prefer to be addressed as pratik. I am excited to be taking this course and look forward to learning more about computers and networking.
+      I have been using computers for several years and have experience with both Windows and Mac operating systems. I have also taken a networking course in the past and am familiar with basic networking concepts.
+      I decided to take this course because I am interested in learning more about computer systems and how they work. I am excited to learn new skills and apply them to my future career.
+
+      Thank you for your time and consideration.
+      Best Regards 
+      Pratik Singh
+    </textarea>
+		<input type="submit" value="Send">
+	</form>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calendar</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      text-align: center;
+      padding: 8px;
+      border: 1px solid black;
+    }
+    th {
+      background-color: #ddd;
+    }
+    .sunday {
+      color: red;
+    }
+    .holiday {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+  <h1>Calendar</h1>
+  <script>
+    function generateCalendar(year, month) {
+      var daysInMonth = new Date(year, month, 0).getDate();
+      var firstDay = new Date(year, month - 1, 1).getDay();
+      var table = document.createElement("table");
+      var tr = document.createElement("tr");
+      var daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      for (var i = 0; i < daysOfWeek.length; i++) {
+        var th = document.createElement("th");
+        th.textContent = daysOfWeek[i];
+        tr.appendChild(th);
+      }
+      table.appendChild(tr);
+      var day = 1;
+      for (var i = 0; i < 6; i++) {
+        var tr = document.createElement("tr");
+        for (var j = 0; j < 7; j++) {
+          var td = document.createElement("td");
+          if (i == 0 && j < firstDay) {
+            td.textContent = "";
+          } else if (day > daysInMonth) {
+            td.textContent = "";
+          } else {
+            td.textContent = day;
+            if (j == 0) {
+              td.classList.add("sunday");
+            }
+            if (day == 1 || day == 26) {
+              td.classList.add("holiday");
+            }
+            day++;
+          }
+          tr.appendChild(td);
+        }
+        table.appendChild(tr);
+      }
+      document.body.appendChild(table);
+    }
+    var year = prompt("Enter the year:");
+    var month = prompt("Enter the month (1-12):");
+
+
+    generateCalendar(year, month);
+  </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Time-Table</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Time-Table</h1>
+    <p>
+        Choose the day to get timetable : 
+        <select name="timetable" id="Timetable">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+            <option value="Sunday">Sunday</option>
+        </select>
+        <input type="submit" value="Submit" onclick="filterTable()">
+    </p>
+    <table id="timetable">
+        <tr>
+            <th>Day</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Time</th>
+            <th>Subject</th>
+            <th>Time</th>
+            <th>Subject</th>
+        </tr>
+        <tr>
+            <td>Monday</td>
+            <td>9:00 AM - 11:00 AM</td>
+            <td >CBOT</td>
+            <td>11:00 AM - 1:00 PM</td>
+            <td>OOD:JAVA</td>
+            <td>2:00 AM - 4:00 PM</td>
+            <td>IT:web dev</td>
+            <td>4:00 PM-5:00 PM</td>
+            <td>S&S</td>
+        </tr>
+        <tr>
+            <td>Tuesday</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>Signals and Systems</td>
+        </tr>
+        <tr>
+            <td>Wednesday</td>
+            <td>09:00 AM - 10:00 PM</td>
+            <td>TOC: Theory of Computaion</td>
+            <td>10:00 AM - 1:00 PM</td>
+            <td>JAVA_LAB</td>
+        </tr>
+        <tr>
+            <td>Thursday</td>
+            <td>09:00 PM - 12:00 PM</td>
+            <td>IT_LAB</td>
+        </tr>
+        <tr>
+            <td>Friday</td>
+            <td>9:00 PM-11:00 PM</td>
+            <td>CBOT:optimization techniques</td>
+            <td>11:00 AM - 12:00 PM</td>
+            <td>IT :web devlopement</td>
+            <td>12:00PM-1:00PM</td>
+            <td>OOD : JAVA</td>
+            <td>2:00 PM - 4:00 PM</td>
+            <td>TOC:Theory of Computaion</td>
+        </tr>
+    </table>
+    <script>
+        function filterTable() {
+            var selectedDay = document.getElementById("Timetable").value;
+            var tableRows = document.getElementById("timetable").rows;
+            for (var i = 1; i < tableRows.length; i++) {
+                if (tableRows[i].cells[0].innerHTML == selectedDay) {
+                    tableRows[i].style.display = "";
+                } else {
+                    tableRows[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>     

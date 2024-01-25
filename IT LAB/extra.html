@@ -1,0 +1,52 @@
+<script>
+  function validateForm() {
+    var name = document.forms["myForm"]["name"].value;
+    var address = document.forms["myForm"]["address"].value;
+    var gender = document.forms["myForm"]["gender"].value;
+    var languages = document.forms["myForm"]["languages"].value;
+    var city = document.forms["myForm"]["city"].value;
+    var phone = document.forms["myForm"]["phone"].value;
+    var email = document.forms["myForm"]["email"].value;
+
+    if (name == "") {
+      alert("Name must be filled out");
+      return false;
+    }
+    if (address == "") {
+      alert("Address must be filled out");
+      return false;
+    }
+    if (gender == "") {
+      alert("Gender must be selected");
+      return false;
+    }
+    if (languages == "") {
+      alert("Languages known must be selected");
+      return false;
+    }
+    if (city == "") {
+      alert("City must be filled out");
+      return false;
+    }
+    if (phone == "") {
+      alert("Phone number must be filled out");
+      return false;
+    }
+    if (isNaN(phone)) {
+      alert("Phone number must be a number");
+      return false;
+    }
+    if (phone.length != 10) {
+      alert("Phone number must be 10 digits");
+      return false;
+    }
+    if (email == "") {
+      alert("Email must be filled out");
+      return false;
+    }
+    if (email.indexOf("@") == -1 || email.indexOf(".") == -1) {
+      alert("Email must be in the correct format");
+      return false;
+    }
+  }
+</script>

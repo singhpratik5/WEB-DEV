@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Learning Forms</title>
+</head>
+<body>
+   <link rel="stylesheet" href="forms.css">
+    <form action="post">
+        <div>
+        <label for="username">Enter the username</label>
+        <input type="text" placeholder="enter the username" id="username" name="username">
+        </div>
+
+        <div>
+            <br>
+            <label for="Gender">Select the Gender</label>
+            <input type="radio" id="male" name="Gender" value="male">
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="Gender" value="female">
+            <label for="female">female</label>
+            <br>
+        </div>
+        <div>
+            <br>
+            <label for="Languages">Languages Known:</label>
+            <input type="checkbox" id ="Hindi">
+            <label for="Hindi">Hindi</label>
+            <input type="checkbox" id ="Hindi">
+            <label for="English">English</label>
+            <input type="checkbox" id ="Telugu">
+            <label for="Telugu">Telugu</label>
+        </div>
+        <div>
+            <br>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter the email">
+        </div>
+        <br>
+        <label for="City">City</label>
+        <input type ="text" id="City" placeholder="Enter your City">
+        <br>
+
+        <div >
+            <br>
+            <label for="Country">Choose Your Country </label>
+            <select name="Country" id="Country">
+                <option value="India">India</option>
+                <option value="Outside_India">Outside_India</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            
+            <label for="comment">Enter your thoughts:</label>
+            <br>
+            <textarea name="comment" id="comment" cols="40" rows="5"></textarea>
+        </div>
+        
+        
+        <input type="submit"  value="submit">
+        
+        <input type="reset"  value="clear">
+    </form>
+</body>
+</html>

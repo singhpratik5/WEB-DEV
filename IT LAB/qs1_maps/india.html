@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>India Map</title>
+  </head>  
+  <script>
+        function openStateInfo(state) {
+            var url = state + ".html";
+            window.open(url, "_blank", "width=400,height=400");
+        }
+   </script>
+</head>
+<body>
+    <h1>India Map </h1>
+    <img height="700" width="933" src = "india.jpg"  usemap="#india">
+    <br><br>
+    <a href="qs_1_maps.html">Return to Home</a>
+    <map name="india">
+        <area shape="rect" coords="300,200,350,400"onclick="openStateInfo('madhya_pradesh')">
+        <area shape="circle" coords="180,200,40"onclick="openStateInfo('rajasthan')">
+        <area shape="rect" coords="600,390,30"onclick="openStateInfo('odisha')">
+        <area shape="rect" coords="150,0,350,100" onclick="openStateInfo('ladakh')">
+        <area shape="circle" coords="420,200,50" onclick="openStateInfo('up')">
+        <area shape="circle" coords="400,150,30" onclick="openStateInfo('uttarakhand')">
+        <area shape="circle" coords="390,4500,40" onclick="openStateInfo('telangana')">
+        <area shape="circle" coords="600,290,40" onclick="openStateInfo('bihar')">
+        <area shape="circle" coords="250,550,40" onclick="openStateInfo('karnataka')">
+        <area shape="circle" coords="250,600,40" onclick="openStateInfo('kerala')">
+        <area shape="circle" coords="460,350,40" onclick="openStateInfo('chhatishgarh')">
+        <area shape="circle" coords="300,580,30" onclick="openStateInfo('tamilnadu')">
+        <area shape="circle" coords="810,310,30" onclick="openStateInfo('manipur')">
+        <area shape="circle" coords="150,110,20" onclick="openStateInfo('jammu_kashmir')">
+        <area shape="rect" coords="" onclick="openStateInfo('haryana')">
+        <area shape="rect" coords="" onclick="openStateInfo('punjab')">
+        <area shape="rect" coords="" onclick="openStateInfo('himachal')">
+        <area shape="rect" coords="" onclick="openStateInfo('gujrat')">
+        <area shape="rect" coords="" onclick="openStateInfo('maharastra')">
+        <area shape="rect" coords="" onclick="openStateInfo('westbegal')">
+        <area shape="rect" coords="" onclick="openStateInfo('jharkhand')">
+        
+        
+    </map>
+</body>
+</html>
